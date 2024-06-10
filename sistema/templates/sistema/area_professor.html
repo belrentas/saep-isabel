@@ -4,7 +4,7 @@
 {% block content %}
 <div id="professor-conteiner">
     <header id="header-prof">
-        <p id="txt-saudacao">Ola Prof. {{user.first_name}} {{user.last_name}}</p>
+        <p id="txt-saudacao">Olá Prof. {{user.first_name}} {{user.last_name}}</p>
 
         <div id="btns">
             <a class="botao-u" href="{% url 'Cadastro_Turma' id=user.id %}">Criar Turma</a>

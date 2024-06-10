@@ -128,7 +128,7 @@ def Excluir_Turma(request, id_turma):
             turma.delete()
             return redirect(f'/area_professor/{request.user.id}')
         else:
-            return HttpResponse('Essa turma tem atividades não e possivel excluir')
+            return HttpResponse('Essa turma tem atividades não é possivel excluir!')
 
 def confirm(request, id_turma):
     turma = get_object_or_404(Turma, pk=id_turma)
