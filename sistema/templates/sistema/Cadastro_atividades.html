@@ -1,0 +1,15 @@
+{% extends 'sistema/base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="login-container">
+    <form id="login" action="{% url 'Cadastrar_Atividade' id_professor=user.id id_turma=turma.id %}" method="POST">
+        {% csrf_token %}
+        <p id="txt-login">Criar Atividade</p>
+        <input type="text" name="Nome_Atividade" placeholder="Nome" class="login-input">
+
+        <button type="submit" id="logar">Criar</button>
+    </form>
+</div>
+
+{% endblock content %}

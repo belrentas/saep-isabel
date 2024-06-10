@@ -1,0 +1,85 @@
+#header-prof{
+    background-color: #2e2850;
+    color: white;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+#txt-saudacao{
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+#btns{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: flex-end;
+}
+
+.botao-u{
+    margin-right: 20px;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 140px;
+    height: 40px;
+    text-decoration: none;
+}
+
+.botao-u:hover{
+    text-decoration: underline;
+}
+
+#turmas{
+    width: 100%;
+    height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#header-turmas{
+    height: 40px;
+    width: 500px;
+    background-color: #d3cfec;
+    display: flex;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.turma{
+    height: 40px;
+    width: 500px;
+    background-color: #efedfd;
+    display: flex;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+#btn-action{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+#visualizar{
+    color: #5943c4;
+}
+
+#excluir{
+    color: #e63c25;
+}

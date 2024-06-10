@@ -1,0 +1,34 @@
+{% extends 'sistema/base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="professor-conteiner">
+    <header id="header-prof">
+        <p id="txt-saudacao">Ola Prof. {{user.first_name}} {{user.last_name}}</p>
+
+        <div id="btns">
+            <a class="botao-u" href="{% url 'Cadastro_Turma' id=user.id %}">Criar Turma</a>
+            <a class="botao-u" href="{% url 'logout_usuario' %}">Logout</a>
+        </div>
+    </header>
+
+    <div id="turmas">
+        <header id="header-turmas">
+            <p>ID</p>
+            <p>Nome da Turma</p>
+        </header>
+        {% for turma in turmas_professor %}
+        <div class="turma">
+            <p>{{ turma.id }}</p>
+            <p>{{ turma.Nome_Turma }}</p>
+            <div id="btn-action">
+                <a id="visualizar" href="{% url 'area_turma' id=turma.id %}" >Visualizar</a>
+                <a id="excluir" href="{% url 'Confirm' id_turma=turma.id %}">excluir</a>
+            </div>
+            
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

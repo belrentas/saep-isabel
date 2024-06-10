@@ -1,0 +1,14 @@
+{% extends 'sistema/base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="login-container">
+    <div id="login">
+        <p>Deseja excluir esta turma?</p>
+        <a href="{% url 'Excluir_Turma' id_turma=turma.id %}">excluir</a>
+        <a href="{% url 'area_professor' id=user.id %}">Cancelar</a>
+    </div>
+
+</div>
+
+{% endblock content %}

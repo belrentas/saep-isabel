@@ -1,0 +1,31 @@
+{% extends 'sistema/base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="professor-conteiner">
+
+    <header id="header-prof">
+        <p id="txt-saudacao">Turma: {{ turma.Nome_Turma }}</p>
+        <div id="btns">
+            <a class="botao-u" href="{% url 'Cadastrar_Atividade' id_professor=user.id id_turma=turma.id %}">Criar Atividade</a>
+        </div>
+    </header>
+
+    <p>prof:{{turma.First_Name}}</p>
+
+    <div id="turmas">
+        <header id="header-turmas">
+            <p>ID</p>
+            <p>Nome da Atividade</p>
+        </header>
+        {% for atividade in atividades_turma %}
+        <div class="turma">
+            <p>{{ atividade.id }}</p>
+            <a>{{ atividade.Nome_item }}</a>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock content %}
