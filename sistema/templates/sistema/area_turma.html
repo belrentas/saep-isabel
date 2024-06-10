@@ -5,7 +5,9 @@
 <div id="professor-conteiner">
 
     <header id="header-prof">
-        <p id="txt-saudacao">Professor: {{turma.Nome_Professor}}</p>
+        <a id="btn-professor" href="{% url 'area_professor' id=user.id %}">
+            <div><p id="txt-professor">Olá Prof. {{user.first_name}} {{user.last_name}}</p></div>
+        </a>
         <p id="txt-saudacao">Turma: {{ turma.Nome_Turma }}</p>
         <div id="btns">
             <a class="botao-u" href="{% url 'Cadastrar_Atividade' id_professor=user.id id_turma=turma.id %}">Criar Atividade</a>

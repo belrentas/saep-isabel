@@ -18,7 +18,7 @@ def Login_Professor(request):
             return redirect(f'/area_professor/{request.user.id}')
         
         else:
-            return HttpResponse('E-mail ou Senha incorretos')
+            return redirect('/')
         
 # logout
 def logout_usuario(request):
@@ -123,12 +123,14 @@ def Excluir_Turma(request, id_turma):
     turma = get_object_or_404(Turma, pk=id_turma)
     atividades = Atividades.objects.all()
 
-    for atividade in atividades:
-        if atividade.id_turma != turma:
-            turma.delete()
-            return redirect(f'/area_professor/{request.user.id}')
-        else:
-            return HttpResponse('Essa turma tem atividades não é possivel excluir!')
+    # for atividade in atividades:
+    #     if atividade.id_turma != turma:
+    #         turma.delete()
+    #         return redirect(f'/area_professor/{request.user.id}')
+    #     else:
+    #         return HttpResponse('Essa turma tem atividades não é possivel excluir!')
+
+    
 
 def confirm(request, id_turma):
     turma = get_object_or_404(Turma, pk=id_turma)
