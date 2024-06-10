@@ -5,7 +5,7 @@
 <div id="login-container">
     <form id="login" action="{% url 'Cadastro' %}" method="POST">
         {% csrf_token %}
-        <p id="txt-login">Cadastro</p>
+        <p id="txt-login">Cadastrar</p>
         <input type="text" name="Nome_Professor" placeholder="Nome" class="login-input">
         <input type="text" name="Sobrenome_Professor" placeholder="Sobrenome" class="login-input">
         <input type="email" name="Email_Professor" placeholder="E-mail" class="login-input">

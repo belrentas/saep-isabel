@@ -38,7 +38,7 @@
 
 #turmas{
     width: 100%;
-    height: 500px;
+    height: 200px;
 
     display: flex;
     align-items: center;
@@ -49,7 +49,7 @@
 #header-turmas{
     height: 40px;
     width: 500px;
-    background-color: #d3cfec;
+    background-color: #ccb0ea;
     display: flex;
     gap: 20px;
     display: flex;
@@ -60,7 +60,7 @@
 .turma{
     height: 40px;
     width: 500px;
-    background-color: #efedfd;
+    background-color: #ffe1ff;
     display: flex;
     gap: 20px;
     display: flex;
@@ -75,15 +75,37 @@
     gap: 10px;
     margin-right: 20px;
 }
+#btn-visualizar{
+    height: 30px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccb0ea;
+    border: 2px #997fd4;
+    border-radius: 10px;
+    font-style: none;
+}
 
 #visualizar{
-    color: #5943c4;
-    border: 2px #997fd4;
-    border-radius: 20px;
+    
+    color: #ffffff;
+    
+}
+
+#btn-excluir{
+    height: 30px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e63c25;
+    border: 2px #e63c25;
+    border-radius: 10px;
+    font-style: none;
 }
 
 #excluir{
-    color: #e63c25;
-    border: 2px #e63c25;
-    border-radius: 20px;
+    color: #ffffff;
+
 }

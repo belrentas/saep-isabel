@@ -22,8 +22,12 @@
             <p>{{ turma.id }}</p>
             <p>{{ turma.Nome_Turma }}</p>
             <div id="btn-action">
-                <a id="visualizar" href="{% url 'area_turma' id=turma.id %}" >Visualizar</a>
-                <a id="excluir" href="{% url 'Confirm' id_turma=turma.id %}">excluir</a>
+                <div id="btn-visualizar">
+                    <a id="visualizar" href="{% url 'area_turma' id=turma.id %}" >Visualizar</a>
+                </div>
+                <div id="btn-excluir">
+                    <a id="excluir" href="{% url 'Confirm' id_turma=turma.id %}">excluir</a>
+                </div>
             </div>
             
         </div>
