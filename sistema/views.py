@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect                   
 from django.http import HttpResponse
-from django.contrib.auth import authenticate, login, logout                        
+from django.contrib.auth import authenticate, login, logout   
+from django.db.models import ProtectedError                     
 from sistema.models import *
 
 
@@ -122,16 +123,14 @@ def area_professor(request, id):
 def Excluir_Turma(request, id_turma):
     turma = get_object_or_404(Turma, pk=id_turma)
     atividades = Atividades.objects.all()
-
-    # for atividade in atividades:
-    #     if atividade.id_turma != turma:
-    #         turma.delete()
-    #         return redirect(f'/area_professor/{request.user.id}')
-    #     else:
-    #         return HttpResponse('Essa turma tem atividades não é possivel excluir!')
+    try:
+        for atividade in atividades:
+            turma.delete()
+            return redirect(f'/area_professor/{request.user.id}')
+    except ProtectedError:
+        return HttpResponse('Essa turma tem atividades não é possivel excluir!')
 
     
-
 def confirm(request, id_turma):
     turma = get_object_or_404(Turma, pk=id_turma)
     return render(request, 'sistema/confirmacao_excluir.html',{'turma':turma})
